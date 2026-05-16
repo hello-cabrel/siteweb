@@ -1,16 +1,8 @@
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<title>Les Tiramisus - 100% Tiramisu</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body bgcolor="#1e1f22">
 <section class="tiramisu-wrapper" lang="fr">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+
   <style>
     /* ==================================================
        0. ANTI-BANDE BLANCHE (RESET GLOBAL ELEMENTOR)
@@ -287,7 +279,7 @@
        5. PORTALS & BENTO
        ================================================== */
     .tiramisu-wrapper .adg-portals-section { padding: 4rem 2rem 10rem !important; }
-    .tiramisu-wrapper .adg-bento-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; grid-template-rows: repeat(2, 400px) !important; gap: 1.5rem !important; max-width: 1400px !important; margin: 0 auto !important; }
+    .tiramisu-wrapper .adg-bento-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; grid-auto-rows: 400px !important; gap: 1.5rem !important; max-width: 1400px !important; margin: 0 auto !important; }
     .tiramisu-wrapper .adg-portal-card { position: relative !important; border-radius: 24px !important; overflow: hidden !important; display: flex !important; flex-direction: column !important; justify-content: flex-end !important; padding: 3rem !important; color: var(--bg-color) !important; box-shadow: 0 10px 30px rgba(70, 43, 29, 0.1) !important; background-color: var(--text-color) !important; text-decoration: none !important; }
 
     .tiramisu-wrapper .adg-portal-bg {
@@ -303,10 +295,10 @@
 
     .tiramisu-wrapper .adg-h2-card { font-family: var(--font-title) !important; margin: 0 0 1rem 0 !important; line-height: 1 !important; font-weight: normal !important; color: var(--bg-color) !important; }
 
-    .tiramisu-wrapper .adg-portal-tiramisu { grid-column: span 2 !important; }
+    .tiramisu-wrapper .adg-portal-tiramisu { grid-column: span 1 !important; }
     .tiramisu-wrapper .adg-portal-tiramisu .adg-portal-bg { background-image: url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=1974&auto=format&fit=crop') !important; }
     .tiramisu-wrapper .adg-portal-brasserie .adg-portal-bg { background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1974&auto=format&fit=crop') !important; }
-    .tiramisu-wrapper .adg-portal-salon { grid-column: span 2 !important; }
+    .tiramisu-wrapper .adg-portal-salon { grid-column: span 1 !important; }
     .tiramisu-wrapper .adg-portal-salon .adg-portal-bg { background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop') !important; }
 
     /* ==================================================
@@ -424,88 +416,6 @@
     }
   </style>
 
-  <style>
-  /* Ajout de CSS spécifique pour la page Tiramisu */
-  .adg-hero-tiramisu {
-      height: 60vh !important;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=1974&auto=format&fit=crop') center/cover !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      flex-direction: column !important;
-      text-align: center !important;
-      color: #fff !important;
-      margin-top: 0 !important;
-      padding-top: 80px !important;
-  }
-
-  .adg-section-cocon {
-      padding: 6rem 2rem !important;
-      text-align: center !important;
-      background-color: var(--bg-color) !important;
-      max-width: 900px !important;
-      margin: 0 auto !important;
-  }
-
-  .adg-products-grid {
-      display: grid !important;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
-      gap: 2.5rem !important;
-      padding: 2rem 4rem 8rem !important;
-      max-width: 1400px !important;
-      margin: 0 auto !important;
-      background-color: var(--bg-color) !important;
-  }
-
-  .adg-product-card {
-      background: #fff !important;
-      border-radius: 16px !important;
-      overflow: hidden !important;
-      box-shadow: 0 10px 20px rgba(70, 43, 29, 0.05) !important;
-      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-      display: flex !important;
-      flex-direction: column !important;
-      text-decoration: none !important;
-  }
-
-  .adg-product-card:hover {
-      transform: translateY(-10px) !important;
-      box-shadow: 0 15px 30px rgba(70, 43, 29, 0.15) !important;
-  }
-
-  .adg-product-img {
-      width: 100% !important;
-      height: 250px !important;
-      object-fit: cover !important;
-  }
-
-  .adg-product-info {
-      padding: 1.5rem !important;
-      text-align: center !important;
-      flex-grow: 1 !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: center !important;
-  }
-
-  .adg-product-title {
-      font-family: var(--font-title) !important;
-      font-size: 2.2rem !important;
-      color: var(--accent-color) !important;
-      margin-bottom: 0.5rem !important;
-      line-height: 1.1 !important;
-  }
-
-  @media (max-width: 768px) {
-      .adg-products-grid {
-          padding: 2rem 1.5rem 6rem !important;
-      }
-      .adg-hero-tiramisu {
-          height: 50vh !important;
-      }
-  }
-  </style>
-
   <header id="adg-main-header" class="adg-header">
     <div class="adg-logo">
       <img src="https://100pour100tiramisu.be/wp-content/uploads/2026/05/100pour100tiramisu.png" alt="Logo">
@@ -543,25 +453,361 @@
   </header>
 
   <main class="adg-main-wrapper">
-    <section class="adg-hero-tiramisu adg-gs-reveal">
-      <h1 class="adg-h1" style="text-shadow: 0 4px 15px rgba(0,0,0,0.8) !important;">100% Tiramisu</h1>
-      <p style="font-family: var(--font-text); font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase;">La carte des saveurs</p>
+    <section class="adg-hero">
+      <video class="adg-hero-bg adg-gs-parallax" autoplay loop muted playsinline poster="https://100pour100tiramisu.be/wp-content/uploads/2026/05/Le-Salon-Gourmand-La-Brasserie.jpg">
+        <source src="https://100pour100tiramisu.be/wp-content/uploads/2026/05/Le-Salon-Gourmand-La-Brasserie-2.mp4" type="video/mp4">
+      </video>
+      <h1 class="adg-h1 adg-gs-reveal">L'Art du Goût</h1>
+      <button class="adg-btn adg-gs-reveal" onclick="document.querySelector('.tiramisu-wrapper #adg-concept').scrollIntoView({behavior: 'smooth'})">Découvrir nos univers</button>
     </section>
 
-    <section class="adg-section-cocon adg-gs-reveal">
-      <div class="adg-reviews-title-wrapper" style="margin-bottom: 2rem;">
-        <span class="adg-quote-mark adg-quote-left">“</span>
-        <h2 class="adg-h2-reviews" style="font-size: 4rem;">Notre Petit Cocon</h2>
-        <span class="adg-quote-mark adg-quote-right">”</span>
-      </div>
-      <p class="adg-manifesto-p" style="font-size: 1.8rem; text-align: center;">
-        Un petit aperçu de notre lieu de gourmandise... En plus de notre spécialité, les tiramisus, nous vous proposons également un large choix de crêpes, gaufres, pancakes, glaces et gaufrettes artisanales.
+    <section id="adg-concept" class="adg-concept-intro">
+      <p class="adg-manifesto-p adg-gs-reveal">
+        Un lieu pensé pour <span class="adg-signature">chaque moment</span> de la journée. De la brasserie authentique à l'art du tiramisu artisanal, jusqu'à notre salon cosy où le temps semble s'arrêter pour laisser place à la gourmandise pure.
       </p>
+
+      <a href="#adg-univers" class="adg-scroll-indicator adg-gs-reveal" onclick="document.querySelector('.tiramisu-wrapper #adg-univers').scrollIntoView({behavior: 'smooth'}); return false;">
+        <span>Découvrir nos univers</span>
+        <svg viewBox="0 0 24 24">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
     </section>
 
-    <div class="adg-products-grid" id="products-container">
-      <!-- Les produits seront injectés ici -->
-    </div>
+    <section id="adg-univers" class="adg-portals-section">
+      <div class="adg-bento-grid">
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au café (Classique)</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1586080447387-a25e1bbdb8ec?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu aux fraises</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au citron (Limoncello)</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1628108157777-6228ce992e59?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au Nutella</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au chocolat blanc</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://plus.unsplash.com/premium_photo-1675796035048-433e143b4d1b?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu aux framboises</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au caramel beurre salé</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1586080447387-a25e1bbdb8ec?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au matcha</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu aux spéculoos</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1628108157777-6228ce992e59?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu à la pistache</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu aux fruits rouges</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://plus.unsplash.com/premium_photo-1675796035048-433e143b4d1b?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu aux Oreos</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu à la noix de coco</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1586080447387-a25e1bbdb8ec?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu aux pêches</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au Bailey's</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1628108157777-6228ce992e59?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu à l'Amaretto</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu aux pommes et cannelle</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://plus.unsplash.com/premium_photo-1675796035048-433e143b4d1b?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au chocolat noir</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au marron</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1586080447387-a25e1bbdb8ec?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu aux figues</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu à la banane</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1628108157777-6228ce992e59?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu aux Kinder Bueno</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu à la mangue</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://plus.unsplash.com/premium_photo-1675796035048-433e143b4d1b?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au fruit de la passion</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu à l'orange</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1586080447387-a25e1bbdb8ec?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu aux amandes</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au nougat</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1628108157777-6228ce992e59?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au café et Baileys</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu à la vanille</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://plus.unsplash.com/premium_photo-1675796035048-433e143b4d1b?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu aux Myrtilles</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au café et rhum</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1586080447387-a25e1bbdb8ec?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu au sirop d'érable</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu aux noix de pécan</h2>
+            </div>
+        </div>
+
+        <div class="adg-portal-card adg-portal-tiramisu adg-gs-reveal" style="padding: 2rem;">
+            <div class="adg-portal-bg" style="background-image: url('https://images.unsplash.com/photo-1628108157777-6228ce992e59?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="adg-portal-content" style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; margin-bottom: 0; display:flex; align-items:center; justify-content:center; height:100%;">
+                <h2 class="adg-h2-card" style="font-size:2rem; color: #fff; text-align:center; margin:0;">Tiramisu à la crème de marron</h2>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <section class="adg-reviews-section">
+      <div class="adg-reviews-header adg-gs-reveal">
+
+        <div class="adg-reviews-title-wrapper">
+          <span class="adg-quote-mark adg-quote-left">“</span>
+          <h2 class="adg-h2-reviews">Ce que nos clients disent</h2>
+          <span class="adg-quote-mark adg-quote-right">”</span>
+        </div>
+
+        <div class="adg-rating-badge">
+          <svg class="adg-wreath" viewBox="0 0 60 100" fill="currentColor">
+            <path d="M30 95 C 15 80 5 55 10 25 C 15 35 25 45 30 65 Z"/>
+            <path d="M 28 85 C 15 75 8 58 10 40 C 18 48 26 55 28 70 Z"/>
+            <path d="M 25 70 C 15 62 10 48 12 35 C 18 42 24 48 25 60 Z"/>
+            <path d="M 22 55 C 14 48 11 36 13 25 C 18 32 22 38 22 48 Z"/>
+            <path d="M 18 40 C 12 35 10 25 12 16 C 16 22 19 28 18 35 Z"/>
+            <path d="M10 25 C 8 18 8 10 12 5 C 14 10 14 15 10 25 Z"/>
+          </svg>
+
+          <div class="adg-rating-content">
+            <div class="adg-stars-row">
+              <span class="adg-rating-score">4.8</span>
+              <div class="adg-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <defs>
+                    <linearGradient id="adg-half-star" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="80%" stop-color="#F5A623" />
+                      <stop offset="80%" stop-color="transparent" />
+                    </linearGradient>
+                  </defs>
+                  <path fill="url(#adg-half-star)" stroke="#F5A623" stroke-width="1.5" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+            </div>
+            <p class="adg-rating-text">plus de 200 avis</p>
+          </div>
+
+          <svg class="adg-wreath adg-wreath-right" viewBox="0 0 60 100" fill="currentColor">
+            <path d="M30 95 C 15 80 5 55 10 25 C 15 35 25 45 30 65 Z"/>
+            <path d="M 28 85 C 15 75 8 58 10 40 C 18 48 26 55 28 70 Z"/>
+            <path d="M 25 70 C 15 62 10 48 12 35 C 18 42 24 48 25 60 Z"/>
+            <path d="M 22 55 C 14 48 11 36 13 25 C 18 32 22 38 22 48 Z"/>
+            <path d="M 18 40 C 12 35 10 25 12 16 C 16 22 19 28 18 35 Z"/>
+            <path d="M10 25 C 8 18 8 10 12 5 C 14 10 14 15 10 25 Z"/>
+          </svg>
+        </div>
+
+      </div>
+
+      <div class="adg-reviews-track">
+        <div class="adg-review-card">
+          <p class="adg-review-text">"Le tiramisu au spéculoos est une pure merveille. Une adresse incontournable à Malmédy, je reviendrai sans hésiter !"</p>
+          <span class="adg-review-author">— Sophie L.</span>
+        </div>
+        <div class="adg-review-card">
+          <p class="adg-review-text">"Un endroit unique dans la région. Pouvoir profiter d'un excellent déjeuner à la brasserie puis d'une douceur au salon l'après-midi... Le concept de David est parfait."</p>
+          <span class="adg-review-author">— Marc T.</span>
+        </div>
+        <div class="adg-review-card">
+          <p class="adg-review-text">"Des plats authentiques et généreux, dignes de notre belle gastronomie belge. Le cadre est chaleureux et l'accueil est toujours au top. Une valeur sûre !"</p>
+          <span class="adg-review-author">— Julien R.</span>
+        </div>
+
+        <div class="adg-review-card">
+          <p class="adg-review-text">"Le tiramisu au spéculoos est une pure merveille. Une adresse incontournable à Malmédy, je reviendrai sans hésiter !"</p>
+          <span class="adg-review-author">— Sophie L.</span>
+        </div>
+        <div class="adg-review-card">
+          <p class="adg-review-text">"Un endroit unique dans la région. Pouvoir profiter d'un excellent déjeuner à la brasserie puis d'une douceur au salon l'après-midi... Le concept de David est parfait."</p>
+          <span class="adg-review-author">— Marc T.</span>
+        </div>
+        <div class="adg-review-card">
+          <p class="adg-review-text">"Des plats authentiques et généreux, dignes de notre belle gastronomie belge. Le cadre est chaleureux et l'accueil est toujours au top. Une valeur sûre !"</p>
+          <span class="adg-review-author">— Julien R.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="adg-reassurance">
+      <div class="adg-marquee-track-img">
+        <img src="https://100pour100tiramisu.be/wp-content/uploads/2026/05/Design-sans-titre.png" alt="Pattern">
+        <img src="https://100pour100tiramisu.be/wp-content/uploads/2026/05/Sans-titre-2000-x-400-px.png" alt="Pattern">
+        <img src="https://100pour100tiramisu.be/wp-content/uploads/2026/05/Design-sans-titre.png" alt="Pattern">
+        <img src="https://100pour100tiramisu.be/wp-content/uploads/2026/05/Sans-titre-2000-x-400-px.png" alt="Pattern">
+      </div>
+    </section>
   </main>
 
   <footer id="adg-contact" class="adg-footer">
@@ -604,63 +850,35 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
   <script>
-    // Liste des saveurs
-    const flavors = [
-      "🍋 Façon tarte citron meringuée",
-      "🍫 Framboise chocolat",
-      "🥥 Ananas coco",
-      "🧂 Caramel salé",
-      "🍓 Framboise",
-      "🍦 Stracciatella",
-      "🍪 Cookies",
-      "🍓 Tarte aux fraises",
-      "🍫 Spéculos choconut",
-      "🍫 KitKat",
-      "🤍 KitKat chocolat blanc",
-      "🍫 Kinder Bueno",
-      "🍪 Cookie",
-      "☕ Cappuccino",
-      "🍫 Oreo",
-      "🍪 Spéculos"
-    ];
-
-    // Images par défaut pour les desserts
-    const images = [
-      "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=500&q=80",
-      "https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?w=500&q=80",
-      "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&q=80",
-      "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&q=80"
-    ];
-
-    const container = document.getElementById('products-container');
-
-    // Création de 34 cartes en bouclant sur les saveurs
-    for (let i = 0; i < 34; i++) {
-      const flavorName = flavors[i % flavors.length];
-      const imgUrl = images[i % images.length];
-
-      const card = document.createElement('div');
-      card.className = 'adg-product-card adg-gs-reveal';
-      card.innerHTML = `
-        <img src="${imgUrl}" alt="${flavorName}" class="adg-product-img">
-        <div class="adg-product-info">
-          <h3 class="adg-product-title">${flavorName}</h3>
-        </div>
-      `;
-      container.appendChild(card);
-    }
-
-    // Initialisation GSAP et comportement
     window.addEventListener('DOMContentLoaded', () => {
       const currentYearElement = document.getElementById('adg-current-year');
       if (currentYearElement) {
         currentYearElement.textContent = new Date().getFullYear();
       }
 
-      const hamburger = document.querySelector('#adg-hamburger-menu');
-      const navMenu = document.querySelector('#adg-nav-menu');
-      const header = document.querySelector('#adg-main-header');
+      const wrapper = document.querySelector('.tiramisu-wrapper');
+      if (!wrapper) return;
+
+      function setFooterReveal() {
+        const footer = wrapper.querySelector('.adg-footer');
+        const mainWrap = wrapper.querySelector('.adg-main-wrapper');
+        if(footer && mainWrap) { mainWrap.style.marginBottom = footer.offsetHeight + 'px'; }
+      }
+      setTimeout(setFooterReveal, 300);
+      window.addEventListener('resize', setFooterReveal);
+
+      window.addEventListener('scroll', () => {
+        const header = wrapper.querySelector('#adg-main-header');
+        if (!header) return;
+        if (window.scrollY > 50) { header.classList.add('adg-scrolled'); }
+        else { header.classList.remove('adg-scrolled'); }
+      });
+
+      const hamburger = wrapper.querySelector('#adg-hamburger-menu');
+      const navMenu = wrapper.querySelector('#adg-nav-menu');
+      const header = wrapper.querySelector('#adg-main-header');
 
       if (hamburger && navMenu && header) {
         hamburger.addEventListener('click', () => {
@@ -668,25 +886,36 @@
           navMenu.classList.toggle('adg-active');
           header.classList.toggle('adg-menu-open');
         });
-      }
 
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) { header.classList.add('adg-scrolled'); }
-        else { header.classList.remove('adg-scrolled'); }
-      });
+        wrapper.querySelectorAll('.adg-nav-item').forEach(link => {
+          link.addEventListener('click', () => {
+            hamburger.classList.remove('adg-active');
+            navMenu.classList.remove('adg-active');
+            header.classList.remove('adg-menu-open');
+          });
+        });
+      }
 
       if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);
 
-        document.querySelectorAll('.adg-gs-reveal').forEach((elem) => {
+        gsap.to(".tiramisu-wrapper .adg-gs-parallax", {
+          yPercent: 30, ease: "none",
+          scrollTrigger: { trigger: ".tiramisu-wrapper .adg-hero", start: "top top", end: "bottom top", scrub: true }
+        });
+
+        wrapper.querySelectorAll('.adg-gs-reveal').forEach((elem) => {
           gsap.fromTo(elem,
             { autoAlpha: 0, y: 50 },
-            { duration: 0.8, autoAlpha: 1, y: 0, ease: "power3.out", scrollTrigger: { trigger: elem, start: "top 90%" } }
+            { duration: 1, autoAlpha: 1, y: 0, ease: "power3.out", scrollTrigger: { trigger: elem, start: "top 85%" } }
           );
+        });
+
+        gsap.to(".tiramisu-wrapper .adg-portal-bg", {
+          yPercent: 10, ease: "none",
+          scrollTrigger: { trigger: ".tiramisu-wrapper .adg-bento-grid", start: "top bottom", end: "bottom top", scrub: true }
         });
       }
     });
   </script>
 </section>
-</body>
-</html>
