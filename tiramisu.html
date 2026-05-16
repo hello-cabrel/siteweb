@@ -1,0 +1,692 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Les Tiramisus - 100% Tiramisu</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body bgcolor="#1e1f22">
+<section class="tiramisu-wrapper" lang="fr">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    /* ==================================================
+       0. ANTI-BANDE BLANCHE (RESET GLOBAL ELEMENTOR)
+       ================================================== */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .elementor-section,
+    .elementor-column,
+    .elementor-column-wrap,
+    .elementor-widget-wrap,
+    .elementor-widget-container,
+    .elementor-widget-html {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* ==================================================
+       1. VARIABLES & RESET BLINDÉ (ISOLATION ELEMENTOR)
+       ================================================== */
+    .tiramisu-wrapper {
+      --bg-color: #F9F6F0;
+      --text-color: #462B1D;
+      --accent-color: #63402D;
+      --font-title: 'Great Vibes', cursive;
+      --font-text: 'Cormorant Garamond', serif;
+
+      background-color: var(--bg-color) !important;
+      color: var(--text-color) !important;
+      font-family: var(--font-text) !important;
+
+      width: 100vw !important;
+      max-width: 100vw !important;
+      position: relative !important;
+      left: 50% !important;
+      right: 50% !important;
+      margin-left: -50vw !important;
+      margin-right: -50vw !important;
+
+      overflow-x: hidden !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      line-height: normal !important;
+    }
+
+    .tiramisu-wrapper * { box-sizing: border-box !important; }
+
+    .tiramisu-wrapper img,
+    .tiramisu-wrapper video,
+    .tiramisu-wrapper h1,
+    .tiramisu-wrapper h2,
+    .tiramisu-wrapper h3,
+    .tiramisu-wrapper p,
+    .tiramisu-wrapper ul,
+    .tiramisu-wrapper li {
+      margin: 0; padding: 0;
+    }
+
+    .tiramisu-wrapper img { display: block; max-width: 100%; height: auto; }
+
+    .tiramisu-wrapper .adg-link { color: inherit; text-decoration: none; box-shadow: none; }
+
+    .tiramisu-wrapper .adg-btn {
+      display: inline-block; padding: 1rem 2rem;
+      background-color: var(--accent-color); color: var(--bg-color);
+      font-family: var(--font-text); text-transform: uppercase;
+      letter-spacing: 1px; font-weight: 600; font-size: 1rem;
+      border: none; border-radius: 50px; cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+      text-decoration: none; line-height: 1; margin-top: 1rem;
+    }
+
+    .tiramisu-wrapper .adg-btn:hover {
+      background-color: var(--text-color); color: var(--bg-color);
+      transform: translateY(-2px);
+    }
+
+    .tiramisu-wrapper .adg-main-wrapper {
+      position: relative; z-index: 2;
+      background-color: var(--bg-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      min-height: 100vh;
+    }
+
+    /* ==================================================
+       2. HEADER & NAVIGATION
+       ================================================== */
+    .tiramisu-wrapper .adg-header {
+      position: fixed !important; top: 0 !important; left: 0 !important;
+      width: 100vw !important; padding: 0.4rem 2rem !important;
+      display: flex !important; justify-content: space-between !important;
+      align-items: center !important; z-index: 9999 !important;
+      background: transparent; transition: all 0.4s ease;
+      border-bottom: 1px solid transparent; margin: 0 !important;
+    }
+
+    .admin-bar .tiramisu-wrapper .adg-header { top: 32px !important; }
+
+    .tiramisu-wrapper .adg-header.adg-scrolled {
+      background: rgba(249, 246, 240, 0.95) !important;
+      backdrop-filter: blur(12px) !important;
+      border-bottom: 1px solid rgba(70, 43, 29, 0.1) !important;
+    }
+
+    .tiramisu-wrapper .adg-header.adg-menu-open {
+      background: transparent !important; backdrop-filter: none !important; border-bottom: none !important;
+    }
+
+    .tiramisu-wrapper .adg-logo { display: flex; align-items: center; }
+
+    .tiramisu-wrapper .adg-logo img {
+      height: 45px !important; width: auto !important;
+      filter: brightness(0) invert(1); transition: filter 0.4s ease;
+    }
+
+    .tiramisu-wrapper .adg-header.adg-scrolled .adg-logo img { filter: none; }
+    .tiramisu-wrapper .adg-header.adg-menu-open .adg-logo img { filter: brightness(0) invert(0) !important; }
+
+    .tiramisu-wrapper .adg-header-right { display: flex; align-items: center; gap: 1.5rem; }
+
+    .tiramisu-wrapper .adg-btn-reservation {
+      display: inline-block; padding: 0.6rem 1.5rem;
+      font-family: var(--font-text); text-transform: uppercase;
+      letter-spacing: 1px; font-weight: 600; font-size: 0.9rem;
+      background-color: transparent; color: var(--bg-color);
+      border: 1px solid var(--bg-color); border-radius: 50px;
+      cursor: pointer; transition: all 0.4s ease; text-decoration: none;
+    }
+
+    .tiramisu-wrapper .adg-header.adg-scrolled .adg-btn-reservation {
+      color: var(--text-color); border-color: var(--text-color);
+    }
+
+    .tiramisu-wrapper .adg-header.adg-menu-open .adg-btn-reservation {
+      color: var(--bg-color) !important; border-color: var(--bg-color) !important;
+    }
+
+    .tiramisu-wrapper .adg-btn-reservation:hover { background-color: var(--bg-color); color: var(--text-color); }
+    .tiramisu-wrapper .adg-header.adg-scrolled .adg-btn-reservation:hover { background-color: var(--text-color); color: var(--bg-color); }
+
+    .tiramisu-wrapper .adg-hamburger {
+      display: flex; flex-direction: column; cursor: pointer; gap: 8px; z-index: 10000; padding: 10px;
+    }
+
+    .tiramisu-wrapper .adg-hamburger span {
+      width: 35px; height: 3px; background-color: var(--bg-color); border-radius: 3px; transition: all 0.4s ease; display: block;
+    }
+
+    .tiramisu-wrapper .adg-header.adg-scrolled .adg-hamburger span { background-color: var(--text-color); }
+
+    .tiramisu-wrapper .adg-hamburger.adg-active span:nth-child(1) { transform: translateY(11px) rotate(45deg); background-color: var(--bg-color) !important; }
+    .tiramisu-wrapper .adg-hamburger.adg-active span:nth-child(2) { opacity: 0; }
+    .tiramisu-wrapper .adg-hamburger.adg-active span:nth-child(3) { transform: translateY(-11px) rotate(-45deg); background-color: var(--bg-color) !important; }
+
+    .tiramisu-wrapper .adg-nav-menu {
+      position: fixed !important; top: 0 !important; right: -100% !important;
+      width: 450px !important; max-width: 100vw !important; height: 100vh !important;
+      background-color: var(--text-color) !important;
+      display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; gap: 2.5rem !important;
+      transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1) !important;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.5) !important;
+      z-index: 9998 !important; overflow: hidden !important;
+    }
+
+    .tiramisu-wrapper .adg-nav-menu.adg-active { right: 0 !important; }
+
+    .tiramisu-wrapper .adg-menu-pattern { position: absolute; top: -10%; left: -10%; right: -10%; bottom: -10%; pointer-events: none; z-index: 0; }
+    .tiramisu-wrapper .adg-menu-pattern svg { position: absolute; fill: var(--bg-color); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(1) { top: 15%; left: 10%; width: 140px; height: 140px; transform: rotate(15deg); opacity: 0.15; filter: drop-shadow(0 15px 20px rgba(0,0,0,0.4)); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(2) { top: 75%; left: 65%; width: 160px; height: 160px; transform: rotate(-25deg); opacity: 0.12; filter: drop-shadow(0 20px 25px rgba(0,0,0,0.5)); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(3) { top: -5%; left: 75%; width: 120px; height: 120px; transform: rotate(45deg); opacity: 0.15; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3)); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(4) { top: 40%; left: 80%; width: 70px; height: 70px; transform: rotate(-10deg); opacity: 0.08; filter: blur(1.5px); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(5) { top: 60%; left: 10%; width: 80px; height: 80px; transform: rotate(70deg); opacity: 0.09; filter: blur(1px); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(6) { top: 25%; left: -5%; width: 90px; height: 90px; transform: rotate(-40deg); opacity: 0.07; filter: blur(2px); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(7) { top: 90%; left: 20%; width: 85px; height: 85px; transform: rotate(20deg); opacity: 0.1; filter: blur(1px); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(8) { top: 50%; left: 15%; width: 65px; height: 65px; transform: rotate(-60deg); opacity: 0.06; filter: blur(2.5px); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(9) { top: 10%; left: 45%; width: 40px; height: 40px; transform: rotate(80deg); opacity: 0.05; filter: blur(4px); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(10) { top: 35%; left: 35%; width: 45px; height: 45px; transform: rotate(-5deg); opacity: 0.04; filter: blur(5px); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(11) { top: 80%; left: -5%; width: 35px; height: 35px; transform: rotate(110deg); opacity: 0.05; filter: blur(3px); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(12) { top: 95%; left: 55%; width: 30px; height: 30px; transform: rotate(-80deg); opacity: 0.03; filter: blur(6px); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(13) { top: -2%; left: 35%; width: 50px; height: 50px; transform: rotate(35deg); opacity: 0.05; filter: blur(3px); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(14) { top: 55%; left: 90%; width: 35px; height: 35px; transform: rotate(-50deg); opacity: 0.04; filter: blur(4px); }
+    .tiramisu-wrapper .adg-menu-pattern svg:nth-child(15) { top: 70%; left: 45%; width: 55px; height: 55px; transform: rotate(15deg); opacity: 0.03; filter: blur(5px); }
+
+    .tiramisu-wrapper .adg-nav-item {
+      font-size: 1.3rem !important; font-weight: 600 !important; text-transform: uppercase !important; letter-spacing: 2px !important;
+      color: var(--bg-color) !important; z-index: 10 !important; position: relative !important;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.5) !important; text-decoration: none !important; display: inline-block !important;
+    }
+
+    .tiramisu-wrapper .adg-nav-item::after {
+      content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 50%;
+      transform: translateX(-50%); background-color: var(--bg-color); transition: width 0.3s ease;
+    }
+    .tiramisu-wrapper .adg-nav-item:hover { color: #ffffff !important; text-shadow: 0 4px 15px rgba(0,0,0,0.8) !important; }
+    .tiramisu-wrapper .adg-nav-item:hover::after { width: 100%; }
+
+    /* ==================================================
+       3. HERO SECTION
+       ================================================== */
+    .tiramisu-wrapper .adg-hero {
+      height: 100vh !important; width: 100vw !important;
+      display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important;
+      text-align: center !important; position: relative !important; overflow: hidden !important; background-color: #000 !important; padding: 0 1rem !important;
+      margin: 0 !important;
+    }
+
+    .tiramisu-wrapper .adg-hero-bg {
+      position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 120% !important; object-fit: cover !important; opacity: 0.35 !important; z-index: 1 !important; pointer-events: none !important;
+    }
+
+    .tiramisu-wrapper .adg-h1 {
+      font-family: var(--font-title) !important; font-size: clamp(3.5rem, 9vw, 8rem) !important; color: var(--bg-color) !important;
+      position: relative !important; z-index: 2 !important; text-shadow: 0 8px 30px rgba(0, 0, 0, 0.7) !important; margin: 0 0 2rem 0 !important;
+      line-height: 1.1 !important; font-weight: normal !important;
+    }
+
+    .tiramisu-wrapper .adg-hero .adg-btn {
+      position: relative !important; z-index: 2 !important; background-color: transparent !important; border: 1px solid var(--bg-color) !important;
+      color: var(--bg-color) !important; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .tiramisu-wrapper .adg-hero .adg-btn:hover { background-color: var(--bg-color) !important; color: var(--text-color) !important; }
+
+    /* ==================================================
+       4. SECTION MANIFESTE
+       ================================================== */
+    .tiramisu-wrapper .adg-concept-intro {
+      padding: 10rem 2rem !important; text-align: center !important; max-width: 900px !important; margin: 0 auto !important;
+      display: flex !important; flex-direction: column !important; align-items: center !important; background-color: transparent !important;
+    }
+
+    .tiramisu-wrapper .adg-manifesto-p {
+      font-family: var(--font-text) !important; font-size: clamp(1.5rem, 3.2vw, 2.4rem) !important; line-height: 1.5 !important;
+      color: var(--text-color) !important; text-align: left !important; position: relative !important; margin: 0 !important; padding: 0 !important;
+    }
+
+    .tiramisu-wrapper .adg-manifesto-p::first-letter {
+      font-family: var(--font-text) !important; font-size: 5.5rem !important; font-weight: 700 !important; float: left !important;
+      margin-right: 2px !important; margin-top: 0.1rem !important; line-height: 0.85 !important; color: var(--accent-color) !important;
+    }
+
+    .tiramisu-wrapper .adg-signature {
+      font-family: var(--font-title) !important; font-size: clamp(3rem, 6vw, 4.5rem) !important; color: var(--accent-color) !important;
+      font-weight: normal !important; display: inline-block !important; transform: rotate(-3deg) translateY(8px) !important;
+      margin: 0 0.5rem !important; text-transform: none !important; letter-spacing: 0 !important;
+    }
+
+    .tiramisu-wrapper .adg-scroll-indicator {
+      display: inline-flex !important; flex-direction: column !important; align-items: center !important;
+      color: var(--text-color) !important; cursor: pointer !important; opacity: 0.6 !important;
+      transition: all 0.3s ease !important; text-decoration: none !important; margin-top: 4rem !important;
+    }
+
+    .tiramisu-wrapper .adg-scroll-indicator:hover { opacity: 1 !important; color: var(--accent-color) !important; }
+
+    .tiramisu-wrapper .adg-scroll-indicator span {
+      font-family: var(--font-text) !important; text-transform: uppercase !important; letter-spacing: 3px !important;
+      font-size: 0.9rem !important; margin-bottom: 0.5rem !important; font-weight: 600 !important;
+    }
+
+    .tiramisu-wrapper .adg-scroll-indicator svg {
+      width: 28px !important; height: 28px !important; fill: none !important; stroke: currentColor !important;
+      stroke-width: 1.5 !important; stroke-linecap: round !important; stroke-linejoin: round !important;
+      -webkit-animation: adgScrollBounce 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+      animation: adgScrollBounce 2s infinite cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    @-webkit-keyframes adgScrollBounce { 0%, 100% { -webkit-transform: translateY(0); transform: translateY(0); } 50% { -webkit-transform: translateY(12px); transform: translateY(12px); } }
+    @keyframes adgScrollBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(12px); } }
+
+    /* ==================================================
+       5. PORTALS & BENTO
+       ================================================== */
+    .tiramisu-wrapper .adg-portals-section { padding: 4rem 2rem 10rem !important; }
+    .tiramisu-wrapper .adg-bento-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; grid-template-rows: repeat(2, 400px) !important; gap: 1.5rem !important; max-width: 1400px !important; margin: 0 auto !important; }
+    .tiramisu-wrapper .adg-portal-card { position: relative !important; border-radius: 24px !important; overflow: hidden !important; display: flex !important; flex-direction: column !important; justify-content: flex-end !important; padding: 3rem !important; color: var(--bg-color) !important; box-shadow: 0 10px 30px rgba(70, 43, 29, 0.1) !important; background-color: var(--text-color) !important; text-decoration: none !important; }
+
+    .tiramisu-wrapper .adg-portal-bg {
+      position: absolute !important; top: -20% !important; left: 0 !important; width: 100% !important; height: 140% !important; background-size: cover !important;
+      background-position: center !important; transition: opacity 0.4s ease !important; opacity: 0.7 !important; z-index: 1 !important; filter: sepia(30%) !important;
+    }
+
+    .tiramisu-wrapper .adg-portal-card:hover { transform: translateY(-10px) !important; box-shadow: 0 20px 40px rgba(70, 43, 29, 0.2) !important; }
+    .tiramisu-wrapper .adg-portal-card:hover .adg-portal-bg { opacity: 0.9 !important; }
+    .tiramisu-wrapper .adg-portal-card::after { content: '' !important; position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; background: linear-gradient(to top, rgba(70, 43, 29, 0.9) 0%, rgba(70, 43, 29, 0.2) 50%, transparent 100%) !important; z-index: 2 !important; }
+    .tiramisu-wrapper .adg-portal-content { position: relative !important; z-index: 3 !important; transform: translateY(20px) !important; transition: transform 0.4s ease !important; }
+    .tiramisu-wrapper .adg-portal-card:hover .adg-portal-content { transform: translateY(0) !important; }
+
+    .tiramisu-wrapper .adg-h2-card { font-family: var(--font-title) !important; margin: 0 0 1rem 0 !important; line-height: 1 !important; font-weight: normal !important; color: var(--bg-color) !important; }
+
+    .tiramisu-wrapper .adg-portal-tiramisu { grid-column: span 2 !important; }
+    .tiramisu-wrapper .adg-portal-tiramisu .adg-portal-bg { background-image: url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=1974&auto=format&fit=crop') !important; }
+    .tiramisu-wrapper .adg-portal-brasserie .adg-portal-bg { background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1974&auto=format&fit=crop') !important; }
+    .tiramisu-wrapper .adg-portal-salon { grid-column: span 2 !important; }
+    .tiramisu-wrapper .adg-portal-salon .adg-portal-bg { background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop') !important; }
+
+    /* ==================================================
+       6. AVIS CLIENTS
+       ================================================== */
+    .tiramisu-wrapper .adg-reviews-section { padding: 8rem 0 !important; background-color: var(--bg-color) !important; overflow: hidden !important; border-top: 1px solid rgba(70, 43, 29, 0.1) !important; }
+    .tiramisu-wrapper .adg-reviews-header { text-align: center !important; margin-bottom: 5rem !important; padding: 0 1rem !important; }
+
+    .tiramisu-wrapper .adg-reviews-title-wrapper { position: relative !important; display: inline-block !important; margin-bottom: 1rem !important; }
+    .tiramisu-wrapper .adg-h2-reviews { font-family: var(--font-title) !important; font-size: clamp(3.5rem, 6vw, 5.5rem) !important; font-weight: normal !important; color: var(--text-color) !important; margin: 0 2rem !important; position: relative !important; z-index: 2 !important; line-height: 1 !important; }
+    .tiramisu-wrapper .adg-quote-mark { position: absolute !important; font-family: 'Cormorant Garamond', serif !important; font-size: clamp(5rem, 10vw, 8rem) !important; color: #C88E77 !important; line-height: 1 !important; opacity: 0.7 !important; z-index: 1 !important; display: inline-block !important; }
+    .tiramisu-wrapper .adg-quote-left { top: -2rem !important; left: -2rem !important; }
+    .tiramisu-wrapper .adg-quote-right { bottom: -4rem !important; right: -2rem !important; }
+
+    .tiramisu-wrapper .adg-rating-badge { display: flex !important; align-items: center !important; justify-content: center !important; gap: 1.5rem !important; margin-top: 1rem !important; }
+    .tiramisu-wrapper .adg-wreath { width: 55px !important; height: auto !important; color: #C88E77 !important; display: block !important; }
+    .tiramisu-wrapper .adg-wreath-right { transform: scaleX(-1) !important; }
+
+    .tiramisu-wrapper .adg-rating-content { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 0.3rem !important; }
+    .tiramisu-wrapper .adg-stars-row { display: flex !important; align-items: center !important; gap: 1rem !important; }
+    .tiramisu-wrapper .adg-rating-score { font-size: 2.8rem !important; font-weight: 700 !important; font-family: var(--font-text) !important; color: var(--text-color) !important; line-height: 1 !important; margin: 0 !important; }
+
+    .tiramisu-wrapper .adg-stars { display: flex !important; gap: 0.2rem !important; align-items: center !important; }
+    .tiramisu-wrapper .adg-stars svg { width: 28px !important; height: 28px !important; fill: #F5A623 !important; display: block !important; }
+
+    .tiramisu-wrapper .adg-rating-text { font-family: var(--font-text) !important; font-size: 1.1rem !important; font-weight: 600 !important; color: var(--text-color) !important; opacity: 0.8 !important; letter-spacing: 1px !important; text-transform: uppercase !important; margin: 0 !important; line-height: 1 !important; }
+
+    .tiramisu-wrapper .adg-reviews-track { display: flex !important; gap: 2rem !important; width: max-content !important; -webkit-animation: adgScrollReviews 30s linear infinite !important; animation: adgScrollReviews 30s linear infinite !important; }
+
+    .tiramisu-wrapper .adg-review-card {
+      background-color: transparent !important; border: 1px solid var(--text-color) !important; padding: 3rem !important; border-radius: 12px !important;
+      width: 400px !important; max-width: 85vw !important; flex-shrink: 0 !important; display: flex !important; flex-direction: column !important; gap: 1.5rem !important; margin: 0 !important;
+    }
+    .tiramisu-wrapper .adg-review-text { font-size: 1.2rem !important; line-height: 1.6 !important; font-style: italic !important; margin: 0 !important; color: var(--text-color) !important; }
+    .tiramisu-wrapper .adg-review-author { font-weight: 600 !important; text-transform: uppercase !important; color: var(--accent-color) !important; margin-top: auto !important; font-family: var(--font-text) !important; }
+
+    @-webkit-keyframes adgScrollReviews { 0% { -webkit-transform: translateX(0); transform: translateX(0); } 100% { -webkit-transform: translateX(calc(-50% - 1rem)); transform: translateX(calc(-50% - 1rem)); } }
+    @keyframes adgScrollReviews { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-50% - 1rem)); } }
+
+    /* ==================================================
+       7. MARQUEE CANVA (CORRECTION ANIMATION MOBILE)
+       ================================================== */
+    .tiramisu-wrapper .adg-reassurance { background-color: var(--text-color) !important; padding: 2rem 0 !important; overflow: hidden !important; display: flex !important; align-items: center !important; margin: 0 !important; }
+
+    .tiramisu-wrapper .adg-marquee-track-img {
+      display: flex !important; width: max-content !important;
+      -webkit-animation: adgScrollImgMarquee 30s linear infinite;
+      animation: adgScrollImgMarquee 30s linear infinite;
+      /* Fix pour forcer l'accélération matérielle sur iPhone/Safari */
+      -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+    }
+
+    .tiramisu-wrapper .adg-marquee-track-img img {
+      height: 130px !important; width: auto !important; flex-shrink: 0 !important; object-fit: contain !important;
+      -webkit-backface-visibility: hidden; backface-visibility: hidden;
+    }
+
+    @-webkit-keyframes adgScrollImgMarquee { 0% { -webkit-transform: translateX(0); transform: translateX(0); } 100% { -webkit-transform: translateX(-50%); transform: translateX(-50%); } }
+    @keyframes adgScrollImgMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* ==================================================
+       8. FOOTER
+       ================================================== */
+    .tiramisu-wrapper .adg-footer {
+      position: fixed !important; bottom: 0 !important; left: 0 !important; width: 100vw !important; z-index: 1 !important;
+      padding: 5rem 2rem 2rem !important; background-color: var(--text-color) !important; color: var(--bg-color) !important;
+      max-height: calc(100vh - 90px) !important; overflow-y: auto !important; scrollbar-width: thin !important; margin: 0 !important;
+    }
+    .tiramisu-wrapper .adg-footer-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 2rem !important; max-width: 1400px !important; margin: 0 auto !important; }
+    .tiramisu-wrapper .adg-h3-footer { font-family: var(--font-title) !important; font-size: 2.5rem !important; margin: 0 0 1.5rem 0 !important; font-weight: normal !important; color: var(--bg-color) !important; line-height: 1 !important; }
+    .tiramisu-wrapper .adg-p-footer, .tiramisu-wrapper .adg-footer-ul { font-family: var(--font-text) !important; font-size: 1.1rem !important; line-height: 1.8 !important; color: var(--bg-color) !important; opacity: 0.9 !important; margin: 0 !important; padding: 0 !important; }
+    .tiramisu-wrapper .adg-footer-ul { list-style: none !important; }
+    .tiramisu-wrapper .adg-footer-li { margin-bottom: 0.5rem !important; }
+    .tiramisu-wrapper .adg-map-container { height: 120px !important; border-radius: 12px !important; overflow: hidden !important; margin-top: 1rem !important; border: 1px solid var(--bg-color) !important; }
+    .tiramisu-wrapper .adg-social-links { display: flex !important; gap: 1rem !important; margin-top: 1.5rem !important; }
+    .tiramisu-wrapper .adg-social-link { font-family: var(--font-text) !important; text-transform: uppercase !important; font-weight: 600 !important; border-bottom: 1px solid transparent !important; transition: border-color 0.3s ease !important; color: var(--bg-color) !important; text-decoration: none !important; }
+    .tiramisu-wrapper .adg-social-link:hover { border-color: var(--bg-color) !important; }
+    .tiramisu-wrapper .adg-copyright { font-family: var(--font-text) !important; text-align: center !important; margin: 3rem 0 0 0 !important; color: var(--bg-color) !important; opacity: 0.7 !important; font-size: 1rem !important; line-height: 1.6 !important; }
+    .tiramisu-wrapper .adg-copyright a { color: var(--bg-color) !important; text-decoration: underline !important; font-weight: bold !important; transition: opacity 0.3s ease !important; }
+    .tiramisu-wrapper .adg-copyright a:hover { opacity: 0.8 !important; }
+
+    /* =========================================
+       RESPONSIVE
+       ========================================= */
+    @media (max-width: 900px) {
+      .tiramisu-wrapper .adg-header { padding: 0.4rem 1.2rem !important; }
+      .tiramisu-wrapper .adg-logo img { height: 38px !important; }
+      .tiramisu-wrapper .adg-btn-reservation { padding: 0.5rem 1.2rem !important; font-size: 0.8rem !important; }
+      .tiramisu-wrapper .adg-concept-intro { padding: 6rem 1.5rem !important; }
+      .tiramisu-wrapper .adg-bento-grid { grid-template-columns: 1fr !important; grid-template-rows: auto !important; gap: 1rem !important; }
+      .tiramisu-wrapper .adg-portal-tiramisu, .tiramisu-wrapper .adg-portal-brasserie, .tiramisu-wrapper .adg-portal-salon { grid-column: span 1 !important; height: 350px !important; }
+      .tiramisu-wrapper .adg-portal-card { padding: 2rem !important; }
+      .tiramisu-wrapper .adg-reviews-section { padding: 5rem 0 !important; }
+      .tiramisu-wrapper .adg-review-card { padding: 2rem !important; }
+
+      /* Accélération de l'animation sur mobile */
+      .tiramisu-wrapper .adg-marquee-track-img {
+        -webkit-animation: adgScrollImgMarquee 20s linear infinite;
+        animation: adgScrollImgMarquee 20s linear infinite;
+      }
+      .tiramisu-wrapper .adg-marquee-track-img img { height: 80px !important; }
+
+      .tiramisu-wrapper .adg-footer-grid { grid-template-columns: 1fr !important; gap: 3rem !important; text-align: left !important; }
+      .tiramisu-wrapper .adg-footer { padding-top: 4rem !important; }
+      .tiramisu-wrapper .adg-rating-badge { gap: 0.5rem !important; }
+      .tiramisu-wrapper .adg-wreath { width: 35px !important; }
+      .tiramisu-wrapper .adg-rating-score { font-size: 2rem !important; }
+      .tiramisu-wrapper .adg-stars svg { width: 20px !important; height: 20px !important; }
+      .tiramisu-wrapper .adg-h2-reviews { margin: 0 1rem !important; }
+      .tiramisu-wrapper .adg-quote-left { top: -1rem !important; left: -1rem !important; font-size: 4rem !important; }
+      .tiramisu-wrapper .adg-quote-right { bottom: -2rem !important; right: -1rem !important; font-size: 4rem !important; }
+      .tiramisu-wrapper .adg-scroll-indicator { bottom: 1rem !important; }
+      .tiramisu-wrapper .adg-scroll-indicator span { font-size: 0.7rem !important; }
+      .tiramisu-wrapper .adg-scroll-indicator svg { width: 20px !important; height: 20px !important; }
+    }
+  </style>
+
+  <style>
+  /* Ajout de CSS spécifique pour la page Tiramisu */
+  .adg-hero-tiramisu {
+      height: 60vh !important;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=1974&auto=format&fit=crop') center/cover !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-direction: column !important;
+      text-align: center !important;
+      color: #fff !important;
+      margin-top: 0 !important;
+      padding-top: 80px !important;
+  }
+
+  .adg-section-cocon {
+      padding: 6rem 2rem !important;
+      text-align: center !important;
+      background-color: var(--bg-color) !important;
+      max-width: 900px !important;
+      margin: 0 auto !important;
+  }
+
+  .adg-products-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+      gap: 2.5rem !important;
+      padding: 2rem 4rem 8rem !important;
+      max-width: 1400px !important;
+      margin: 0 auto !important;
+      background-color: var(--bg-color) !important;
+  }
+
+  .adg-product-card {
+      background: #fff !important;
+      border-radius: 16px !important;
+      overflow: hidden !important;
+      box-shadow: 0 10px 20px rgba(70, 43, 29, 0.05) !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+      display: flex !important;
+      flex-direction: column !important;
+      text-decoration: none !important;
+  }
+
+  .adg-product-card:hover {
+      transform: translateY(-10px) !important;
+      box-shadow: 0 15px 30px rgba(70, 43, 29, 0.15) !important;
+  }
+
+  .adg-product-img {
+      width: 100% !important;
+      height: 250px !important;
+      object-fit: cover !important;
+  }
+
+  .adg-product-info {
+      padding: 1.5rem !important;
+      text-align: center !important;
+      flex-grow: 1 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+  }
+
+  .adg-product-title {
+      font-family: var(--font-title) !important;
+      font-size: 2.2rem !important;
+      color: var(--accent-color) !important;
+      margin-bottom: 0.5rem !important;
+      line-height: 1.1 !important;
+  }
+
+  @media (max-width: 768px) {
+      .adg-products-grid {
+          padding: 2rem 1.5rem 6rem !important;
+      }
+      .adg-hero-tiramisu {
+          height: 50vh !important;
+      }
+  }
+  </style>
+
+  <header id="adg-main-header" class="adg-header">
+    <div class="adg-logo">
+      <img src="https://100pour100tiramisu.be/wp-content/uploads/2026/05/100pour100tiramisu.png" alt="Logo">
+    </div>
+    <div class="adg-header-right">
+      <a href="https://100pour100tiramisu.be/reservation/" class="adg-btn-reservation">Réserver</a>
+      <div class="adg-hamburger" id="adg-hamburger-menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav id="adg-nav-menu" class="adg-nav-menu">
+      <div class="adg-menu-pattern">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1010 10 1 1 0 00-1-1h-1a2 2 0 01-2-2v-1a1 1 0 00-1-1c-1.6 0-3-1.4-3-3V3a1 1 0 00-2-1zm-2 5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm5 8a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-6 2a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-1-6a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M20 3H4v10c0 2.2 1.8 4 4 4h6c2.2 0 4-1.8 4-4v-1h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2a1 1 0 00-1 1v3H8v2h8V6h-3V3a1 1 0 00-1-1zm-6 8c-1.1 0-2 .9-2 2v8h20v-8c0-1.1-.9-2-2-2H6zm0 2h12v3H6v-3z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2c-3.3 0-6 2.7-6 6v3h12V8c0-3.3-2.7-6-6-6zm-4 10l3.3 9.4c.4 1.1 2 1.1 2.4 0L17 12H8z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M17 8c-9 2-11.1 8.2-13.2 13.3l1.9.7c.9-2.3 1.4-2.1 2.3-2 11 0 14-17 14-17-1 2-8 2.3-13 3.3-5 1-2 7.7-2 7.7 3-5 5-5.5 10-6z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm7.5-6.5l-2.4 1.2a7 7 0 00-1.8-1.8l1.2-2.4a1 1 0 011.3-.4l2.1 1.1a1 1 0 01.4 1.3c0 .3-.4.8-.8 1zM3 13.7l2.4-1.2c.4.7 1 1.3 1.8 1.8l-1.2 2.4a1 1 0 01-1.3.4l-2.1-1.1a1 1 0 01-.4-1.3c0-.3.4-.8.8-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1010 10 1 1 0 00-1-1h-1a2 2 0 01-2-2v-1a1 1 0 00-1-1c-1.6 0-3-1.4-3-3V3a1 1 0 00-2-1zm-2 5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm5 8a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-6 2a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-1-6a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M20 3H4v10c0 2.2 1.8 4 4 4h6c2.2 0 4-1.8 4-4v-1h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2a1 1 0 00-1 1v3H8v2h8V6h-3V3a1 1 0 00-1-1zm-6 8c-1.1 0-2 .9-2 2v8h20v-8c0-1.1-.9-2-2-2H6zm0 2h12v3H6v-3z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2c-3.3 0-6 2.7-6 6v3h12V8c0-3.3-2.7-6-6-6zm-4 10l3.3 9.4c.4 1.1 2 1.1 2.4 0L17 12H8z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M17 8c-9 2-11.1 8.2-13.2 13.3l1.9.7c.9-2.3 1.4-2.1 2.3-2 11 0 14-17 14-17-1 2-8 2.3-13 3.3-5 1-2 7.7-2 7.7 3-5 5-5.5 10-6z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm7.5-6.5l-2.4 1.2a7 7 0 00-1.8-1.8l1.2-2.4a1 1 0 011.3-.4l2.1 1.1a1 1 0 01.4 1.3c0 .3-.4.8-.8 1zM3 13.7l2.4-1.2c.4.7 1 1.3 1.8 1.8l-1.2 2.4a1 1 0 01-1.3.4l-2.1-1.1a1 1 0 01-.4-1.3c0-.3.4-.8.8-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1010 10 1 1 0 00-1-1h-1a2 2 0 01-2-2v-1a1 1 0 00-1-1c-1.6 0-3-1.4-3-3V3a1 1 0 00-2-1zm-2 5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm5 8a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-6 2a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-1-6a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M20 3H4v10c0 2.2 1.8 4 4 4h6c2.2 0 4-1.8 4-4v-1h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2a1 1 0 00-1 1v3H8v2h8V6h-3V3a1 1 0 00-1-1zm-6 8c-1.1 0-2 .9-2 2v8h20v-8c0-1.1-.9-2-2-2H6zm0 2h12v3H6v-3z"/></svg>
+      </div>
+      <a href="#tiramisu" class="adg-nav-item">Tiramisu</a>
+      <a href="#brasserie" class="adg-nav-item">Brasserie</a>
+      <a href="#salon" class="adg-nav-item">Salon Gourmand</a>
+      <a href="#histoire" class="adg-nav-item">Notre histoire</a>
+      <a href="#contact" class="adg-nav-item">Contact</a>
+    </nav>
+  </header>
+
+  <main class="adg-main-wrapper">
+    <section class="adg-hero-tiramisu adg-gs-reveal">
+      <h1 class="adg-h1" style="text-shadow: 0 4px 15px rgba(0,0,0,0.8) !important;">100% Tiramisu</h1>
+      <p style="font-family: var(--font-text); font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase;">La carte des saveurs</p>
+    </section>
+
+    <section class="adg-section-cocon adg-gs-reveal">
+      <div class="adg-reviews-title-wrapper" style="margin-bottom: 2rem;">
+        <span class="adg-quote-mark adg-quote-left">“</span>
+        <h2 class="adg-h2-reviews" style="font-size: 4rem;">Notre Petit Cocon</h2>
+        <span class="adg-quote-mark adg-quote-right">”</span>
+      </div>
+      <p class="adg-manifesto-p" style="font-size: 1.8rem; text-align: center;">
+        Un petit aperçu de notre lieu de gourmandise... En plus de notre spécialité, les tiramisus, nous vous proposons également un large choix de crêpes, gaufres, pancakes, glaces et gaufrettes artisanales.
+      </p>
+    </section>
+
+    <div class="adg-products-grid" id="products-container">
+      <!-- Les produits seront injectés ici -->
+    </div>
+  </main>
+
+  <footer id="adg-contact" class="adg-footer">
+    <div class="adg-footer-grid adg-gs-reveal">
+
+      <div class="adg-footer-col">
+        <h3 class="adg-h3-footer">Nous trouver</h3>
+        <p class="adg-p-footer">Les Closures 2<br>Malmédy, Belgium, 4960</p>
+        <div class="adg-map-container">
+          <iframe src="https://maps.google.com/maps?q=Les%20Closures%202,%204960%20Malmedy,%20Belgique&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="adg-footer-col">
+        <h3 class="adg-h3-footer">Horaires</h3>
+        <ul class="adg-footer-ul">
+          <li class="adg-footer-li"><strong>Lundi :</strong> Fermé</li>
+          <li class="adg-footer-li"><strong>Mardi - Vendredi :</strong><br>Déjeuner : 12h00 - 14h30<br>Salon/Tiramisu : 10h00 - 18h00</li>
+          <li class="adg-footer-li"><strong>Samedi :</strong> 10h00 - 19h00 (Service continu)</li>
+          <li class="adg-footer-li"><strong>Dimanche :</strong> 09h00 - 14h00 (Brunch)</li>
+        </ul>
+      </div>
+
+      <div class="adg-footer-col">
+        <h3 class="adg-h3-footer">Contact</h3>
+        <p class="adg-p-footer">📞 +32 472 02 33 32</p>
+        <p class="adg-p-footer">✉️ cequonaimemont@gmail.com</p>
+        <div class="adg-social-links">
+          <a href="#" class="adg-social-link">Instagram</a>
+          <a href="#" class="adg-social-link">Facebook</a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="adg-copyright">
+      © <span id="adg-current-year"></span> David. Tous droits réservés. - Created by <a href="mailto:cabrelkougang2017@gmail.com">Cabrel</a>
+    </p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    // Liste des saveurs
+    const flavors = [
+      "🍋 Façon tarte citron meringuée",
+      "🍫 Framboise chocolat",
+      "🥥 Ananas coco",
+      "🧂 Caramel salé",
+      "🍓 Framboise",
+      "🍦 Stracciatella",
+      "🍪 Cookies",
+      "🍓 Tarte aux fraises",
+      "🍫 Spéculos choconut",
+      "🍫 KitKat",
+      "🤍 KitKat chocolat blanc",
+      "🍫 Kinder Bueno",
+      "🍪 Cookie",
+      "☕ Cappuccino",
+      "🍫 Oreo",
+      "🍪 Spéculos"
+    ];
+
+    // Images par défaut pour les desserts
+    const images = [
+      "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=500&q=80",
+      "https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?w=500&q=80",
+      "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&q=80",
+      "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&q=80"
+    ];
+
+    const container = document.getElementById('products-container');
+
+    // Création de 34 cartes en bouclant sur les saveurs
+    for (let i = 0; i < 34; i++) {
+      const flavorName = flavors[i % flavors.length];
+      const imgUrl = images[i % images.length];
+
+      const card = document.createElement('div');
+      card.className = 'adg-product-card adg-gs-reveal';
+      card.innerHTML = `
+        <img src="${imgUrl}" alt="${flavorName}" class="adg-product-img">
+        <div class="adg-product-info">
+          <h3 class="adg-product-title">${flavorName}</h3>
+        </div>
+      `;
+      container.appendChild(card);
+    }
+
+    // Initialisation GSAP et comportement
+    window.addEventListener('DOMContentLoaded', () => {
+      const currentYearElement = document.getElementById('adg-current-year');
+      if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+      }
+
+      const hamburger = document.querySelector('#adg-hamburger-menu');
+      const navMenu = document.querySelector('#adg-nav-menu');
+      const header = document.querySelector('#adg-main-header');
+
+      if (hamburger && navMenu && header) {
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('adg-active');
+          navMenu.classList.toggle('adg-active');
+          header.classList.toggle('adg-menu-open');
+        });
+      }
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) { header.classList.add('adg-scrolled'); }
+        else { header.classList.remove('adg-scrolled'); }
+      });
+
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.querySelectorAll('.adg-gs-reveal').forEach((elem) => {
+          gsap.fromTo(elem,
+            { autoAlpha: 0, y: 50 },
+            { duration: 0.8, autoAlpha: 1, y: 0, ease: "power3.out", scrollTrigger: { trigger: elem, start: "top 90%" } }
+          );
+        });
+      }
+    });
+  </script>
+</section>
+</body>
+</html>
