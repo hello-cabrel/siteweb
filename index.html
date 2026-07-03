@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Studio Licorne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset & Base */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      overflow-x: hidden;
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit !important;
+    }
+
+    /* 1. VARIABLES & WRAPPER */
+    .licorne-wrapper {
+      --bg-color: #ffffff;
+      --text-color: #333333;
+      --accent-color: #41a7b3; /* Teal from Studio Licorne logo */
+      --font-title: 'Montserrat', sans-serif;
+      --font-text: 'Poppins', sans-serif;
+
+      background-color: var(--bg-color) !important;
+      color: var(--text-color) !important;
+      font-family: var(--font-text) !important;
+      width: 100vw !important;
+      max-width: 100vw !important;
+      position: relative !important;
+      overflow-x: hidden !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    .licorne-wrapper h1, .licorne-wrapper p {
+      margin: 0; padding: 0;
+    }
+
+    /* 2. HEADER & NAVIGATION */
+    .licorne-wrapper .licorne-header {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      padding: 1rem 3rem !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      z-index: 9999 !important;
+      background: transparent;
+      transition: all 0.4s ease;
+      border-bottom: 1px solid transparent;
+      margin: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .licorne-wrapper .licorne-header.scrolled {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(12px) !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+      padding: 0.8rem 3rem !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .licorne-wrapper .licorne-header.menu-open {
+      background: transparent !important;
+      backdrop-filter: none !important;
+      border-bottom: none !important;
+      box-shadow: none !important;
+    }
+
+    .licorne-wrapper .licorne-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .licorne-wrapper .licorne-logo img {
+      height: 55px !important;
+      width: auto !important;
+      transition: transform 0.4s ease;
+    }
+
+    .licorne-wrapper .licorne-logo:hover img {
+      transform: scale(1.05);
+    }
+
+    .licorne-wrapper .licorne-header-right {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    /* Desktop Nav */
+    .licorne-wrapper .licorne-nav-desktop {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .licorne-wrapper .licorne-nav-link {
+      font-family: var(--font-title);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-color);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      transition: color 0.3s ease;
+      display: inline-block;
+    }
+
+    .licorne-wrapper .licorne-nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+
+    .licorne-wrapper .licorne-nav-link:hover {
+      color: var(--accent-color);
+    }
+
+    .licorne-wrapper .licorne-nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* CTA Button */
+    .licorne-wrapper .licorne-btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background-color: var(--accent-color);
+      color: #ffffff;
+      font-family: var(--font-title);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      border: 2px solid var(--accent-color);
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .licorne-wrapper .licorne-btn:hover {
+      background-color: transparent;
+      color: var(--accent-color);
+    }
+
+    /* Mobile Menu Toggle (Hamburger) */
+    .licorne-wrapper .licorne-hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 6px;
+      z-index: 10000;
+      padding: 10px;
+    }
+
+    .licorne-wrapper .licorne-hamburger span {
+      width: 30px;
+      height: 3px;
+      background-color: var(--text-color);
+      border-radius: 3px;
+      transition: all 0.4s ease;
+      display: block;
+    }
+
+    .licorne-wrapper .licorne-hamburger.active span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+      background-color: var(--text-color) !important;
+    }
+
+    .licorne-wrapper .licorne-hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .licorne-wrapper .licorne-hamburger.active span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+      background-color: var(--text-color) !important;
+    }
+
+    /* Mobile Nav Overlay */
+    .licorne-wrapper .licorne-nav-mobile {
+      position: fixed !important;
+      top: 0 !important;
+      right: -100% !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      background-color: var(--bg-color) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 2.5rem !important;
+      transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1) !important;
+      z-index: 9998 !important;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.1) !important;
+    }
+
+    .licorne-wrapper .licorne-nav-mobile.active {
+      right: 0 !important;
+    }
+
+    .licorne-wrapper .licorne-nav-mobile .licorne-nav-link {
+      font-size: 1.5rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .licorne-wrapper .licorne-header {
+        padding: 1rem 1.5rem !important;
+      }
+      .licorne-wrapper .licorne-header.scrolled {
+        padding: 0.8rem 1.5rem !important;
+      }
+      .licorne-wrapper .licorne-nav-desktop {
+        display: none !important;
+      }
+      .licorne-wrapper .licorne-hamburger {
+        display: flex;
+      }
+      .licorne-wrapper .licorne-btn-desktop {
+        display: none;
+      }
+    }
+
+    /* Dummy Main wrapper for scrolling demonstration */
+    .licorne-wrapper .licorne-main-wrapper {
+      position: relative;
+      z-index: 2;
+      background-color: var(--bg-color);
+      min-height: 100vh;
+      padding-top: 100px;
+    }
+
+    .licorne-wrapper section {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #dddddd;
+      border-bottom: 1px solid #f0f0f0;
+      text-align: center;
+    }
+
+    .licorne-wrapper .hero {
+      background: linear-gradient(135deg, #f9f9f9 0%, #eef7f8 100%);
+    }
+
+    .licorne-wrapper .hero h1 {
+      color: var(--text-color);
+      font-family: var(--font-title);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin-bottom: 1rem;
+    }
+
+    .licorne-wrapper .hero p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #666;
+      font-weight: 400;
+      max-width: 600px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="licorne-wrapper" lang="fr">
+  <!-- HEADER MENU -->
+  <header id="main-header" class="licorne-header">
+    <a href="#" class="licorne-logo gs-reveal-nav">
+      <img src="https://www.studio-licorne.com/wp-content/uploads/2022/09/Petit-logo.png" alt="Studio Licorne Logo">
+    </a>
+
+    <div class="licorne-header-right">
+      <nav class="licorne-nav-desktop">
+        <a href="#services" class="licorne-nav-link gs-reveal-nav">Nos services</a>
+        <a href="#tarifs" class="licorne-nav-link gs-reveal-nav">Tarifs</a>
+        <a href="#portfolio" class="licorne-nav-link gs-reveal-nav">Portfolio</a>
+        <a href="#propos" class="licorne-nav-link gs-reveal-nav">À propos de nous</a>
+      </nav>
+
+      <a href="#contact" class="licorne-btn licorne-btn-desktop gs-reveal-nav">Commençons !</a>
+
+      <div class="licorne-hamburger" id="hamburger-menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION -->
+  <nav id="mobile-menu" class="licorne-nav-mobile">
+    <a href="#services" class="licorne-nav-link mobile-link">Nos services</a>
+    <a href="#tarifs" class="licorne-nav-link mobile-link">Tarifs</a>
+    <a href="#portfolio" class="licorne-nav-link mobile-link">Portfolio</a>
+    <a href="#propos" class="licorne-nav-link mobile-link">À propos de nous</a>
+    <a href="#contact" class="licorne-btn mobile-link" style="margin-top: 1rem;">Commençons !</a>
+  </nav>
+
+  <!-- PLACEHOLDER CONTENT FOR SCROLLING -->
+  <main class="licorne-main-wrapper">
+    <section class="hero" id="home">
+      <h1 class="gs-reveal">Studio Licorne</h1>
+      <p class="gs-reveal">L’agence de marketing digital qui répond à tous vos besoins.</p>
+    </section>
+    <section id="services"><span class="gs-reveal">Nos services</span></section>
+    <section id="tarifs"><span class="gs-reveal">Tarifs</span></section>
+    <section id="portfolio"><span class="gs-reveal">Portfolio</span></section>
+    <section id="propos"><span class="gs-reveal">À propos de nous</span></section>
+  </main>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.getElementById('main-header');
+      const hamburger = document.getElementById('hamburger-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      // Scroll Header effect
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Mobile menu toggle
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        header.classList.toggle('menu-open');
+      });
+
+      // Close mobile menu when a link is clicked
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          header.classList.remove('menu-open');
+        });
+      });
+
+      // GSAP Animations
+      if (typeof gsap !== 'undefined') {
+        // Initial Nav Reveal
+        gsap.from(".gs-reveal-nav", {
+          y: -20,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power3.out",
+          delay: 0.2
+        });
+
+        // Sections scroll reveal
+        if (typeof ScrollTrigger !== 'undefined') {
+          gsap.registerPlugin(ScrollTrigger);
+
+          gsap.utils.toArray('.gs-reveal').forEach(elem => {
+            gsap.fromTo(elem,
+              { autoAlpha: 0, y: 50 },
+              {
+                duration: 1,
+                autoAlpha: 1,
+                y: 0,
+                ease: "power3.out",
+                scrollTrigger: {
+                  trigger: elem,
+                  start: "top 85%"
+                }
+              }
+            );
+          });
+        }
+      }
+    });
+  </script>
+</body>
+</html>
